@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="F.R.N.D.S Grand Café — A dual-soul dining experience blending Mediterranean warmth and Japanese precision in the heart of Dubai.">
+    <title>F.R.N.D.S Grand Café — Home</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav class="navbar" id="main-navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__logo" id="nav-logo">
+                <span class="navbar__logo-icon">◆</span>
+                <span class="navbar__logo-text">F.R.N.D.S</span>
+                <span class="navbar__logo-sub">GRAND CAFÉ</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="index.html" class="navbar__link navbar__link--active" data-page="home">Home</a></li>
+                <li><a href="menu.html" class="navbar__link" data-page="menu">Menu</a></li>
+                <li><a href="gallery.html" class="navbar__link" data-page="gallery">Gallery</a></li>
+                <li><a href="reservation.html" class="navbar__link navbar__link--cta" data-page="reservation">Reserve a
+                        Table</a></li>
+            </ul>
+
+            <button class="navbar__hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <header class="hero" id="hero-section">
+        <div class="hero__bg-overlay"></div>
+        <div class="hero__noise"></div>
+        <div class="hero__content">
+            <p class="hero__tagline">Dubai's Dual-Soul Dining Experience</p>
+            <h1 class="hero__title">
+                <span class="hero__title-line hero__title-line--1">Where the</span>
+                <span class="hero__title-line hero__title-line--2">Mediterranean</span>
+                <span class="hero__title-line hero__title-line--3">Meets <em>Japan</em></span>
+            </h1>
+            <p class="hero__desc">A grand café that marries the sun-drenched warmth of the Mediterranean with the
+                meticulous, sharp precision of Japan.</p>
+            <div class="hero__actions">
+                <a href="menu.html" class="btn btn--primary" id="hero-cta-menu">Explore Our Menu</a>
+                <a href="reservation.html" class="btn btn--ghost" id="hero-cta-reserve">Reserve a Table</a>
+            </div>
+        </div>
+        <div class="hero__scroll-hint" id="scroll-hint">
+            <span>Scroll to Discover</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section class="about" id="about-section">
+        <div class="about__container">
+            <div class="about__text">
+                <p class="section-label">Our Philosophy</p>
+                <h2 class="section-title">The Grand <br>Collector</h2>
+                <p class="about__body">Every plate tells a story. Inspired by the rigid geometry of 1920s Art Deco and
+                    the fluid, atmospheric soul of a Parisian evening, F.R.N.D.S Grand Café is not merely a restaurant —
+                    it is a curated experience.</p>
+                <p class="about__body">We break the template. We embrace intentional asymmetry and editorial pacing. Our
+                    kitchen speaks two languages: the fiery embrace of the Mediterranean and the whispered precision of
+                    Japanese craftsmanship.</p>
+            </div>
+            <div class="about__visual">
+                <div class="about__image-frame" id="about-image-frame">
+                    <img src="assets/about-interior.jpg" alt="F.R.N.D.S Grand Café interior" class="about__image"
+                        loading="lazy">
+                    <div class="about__image-accent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ DUAL SOUL ═══════════════ -->
+    <section class="dual-soul" id="dual-soul-section">
+        <div class="dual-soul__container">
+            <p class="section-label section-label--center">Our Dual Soul</p>
+            <h2 class="section-title section-title--center">Two Worlds, <br>One Table</h2>
+
+            <div class="dual-soul__cards">
+                <div class="dual-soul__card dual-soul__card--mediterranean" id="soul-mediterranean">
+                    <div class="dual-soul__card-accent"></div>
+                    <span class="dual-soul__card-icon">☀</span>
+                    <h3 class="dual-soul__card-title">Mediterranean</h3>
+                    <p class="dual-soul__card-desc">Sun-drenched flavors, bold spices, and the rustic warmth of coastal
+                        cooking traditions passed down through generations.</p>
+                    <a href="menu.html#mediterranean" class="btn btn--link">Explore Dishes →</a>
+                </div>
+                <div class="dual-soul__card dual-soul__card--japanese" id="soul-japanese">
+                    <div class="dual-soul__card-accent"></div>
+                    <span class="dual-soul__card-icon">月</span>
+                    <h3 class="dual-soul__card-title">Japanese</h3>
+                    <p class="dual-soul__card-desc">Meticulous precision, clean flavors, and an unwavering respect for
+                        every ingredient — the art of omakase, reimagined.</p>
+                    <a href="menu.html#japanese" class="btn btn--link">Explore Dishes →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FEATURED ═══════════════ -->
+    <section class="featured" id="featured-section">
+        <div class="featured__container">
+            <div class="featured__header">
+                <p class="section-label">Chef's Selection</p>
+                <h2 class="section-title">Signature <br>Creations</h2>
+            </div>
+            <div class="featured__grid">
+                <article class="featured__item" id="featured-item-1">
+                    <div class="featured__item-image">
+                        <img src="assets/dish-1.jpg" alt="Saffron Risotto" loading="lazy">
+                        <span class="featured__item-tag featured__item-tag--mediterranean">Mediterranean</span>
+                    </div>
+                    <div class="featured__item-info">
+                        <h3 class="featured__item-name">Saffron Risotto</h3>
+                        <p class="featured__item-desc">Arborio rice, saffron threads, aged parmesan, truffle oil</p>
+                        <span class="featured__item-price">AED 95</span>
+                    </div>
+                </article>
+                <article class="featured__item" id="featured-item-2">
+                    <div class="featured__item-image">
+                        <img src="assets/dish-2.jpg" alt="Omakase Nigiri" loading="lazy">
+                        <span class="featured__item-tag featured__item-tag--japanese">Japanese</span>
+                    </div>
+                    <div class="featured__item-info">
+                        <h3 class="featured__item-name">Omakase Nigiri</h3>
+                        <p class="featured__item-desc">Chef's selection of seasonal fish, vinegared rice, wasabi</p>
+                        <span class="featured__item-price">AED 145</span>
+                    </div>
+                </article>
+                <article class="featured__item" id="featured-item-3">
+                    <div class="featured__item-image">
+                        <img src="assets/dish-3.jpg" alt="Wagyu Tataki" loading="lazy">
+                        <span class="featured__item-tag featured__item-tag--japanese">Japanese</span>
+                    </div>
+                    <div class="featured__item-info">
+                        <h3 class="featured__item-name">Wagyu Tataki</h3>
+                        <p class="featured__item-desc">A5 wagyu, ponzu, micro greens, toasted sesame</p>
+                        <span class="featured__item-price">AED 185</span>
+                    </div>
+                </article>
+            </div>
+            <div class="featured__cta">
+                <a href="menu.html" class="btn btn--primary" id="featured-cta">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CTA BANNER ═══════════════ -->
+    <section class="cta-banner" id="cta-banner-section">
+        <div class="cta-banner__noise"></div>
+        <div class="cta-banner__content">
+            <h2 class="cta-banner__title">An Evening <br>Awaits You</h2>
+            <p class="cta-banner__desc">Reserve your table at F.R.N.D.S Grand Café and step into a world where every
+                detail is curated for you.</p>
+            <a href="reservation.html" class="btn btn--primary btn--lg" id="cta-banner-btn">Make a Reservation</a>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="footer" id="main-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <span class="footer__logo-icon">◆</span>
+                <span class="footer__logo-text">F.R.N.D.S</span>
+                <span class="footer__logo-sub">GRAND CAFÉ</span>
+                <p class="footer__tagline">Dubai's Dual-Soul Dining Experience</p>
+            </div>
+            <div class="footer__links">
+                <div class="footer__col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="reservation.html">Reservations</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Visit</h4>
+                    <p>Downtown Dubai, UAE</p>
+                    <p>Open Daily: 10am – 12am</p>
+                    <p>+971 4 XXX XXXX</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Connect</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">TripAdvisor</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 F.R.N.D.S Grand Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

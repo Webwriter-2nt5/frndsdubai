@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our dual-soul menu — Mediterranean warmth and Japanese precision at F.R.N.D.S Grand Café, Dubai.">
+    <title>Menu — F.R.N.D.S Grand Café</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/menu-page.css">
+</head>
+<body>
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav class="navbar" id="main-navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__logo" id="nav-logo">
+                <span class="navbar__logo-icon">◆</span>
+                <span class="navbar__logo-text">F.R.N.D.S</span>
+                <span class="navbar__logo-sub">GRAND CAFÉ</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="index.html" class="navbar__link" data-page="home">Home</a></li>
+                <li><a href="menu.html" class="navbar__link navbar__link--active" data-page="menu">Menu</a></li>
+                <li><a href="gallery.html" class="navbar__link" data-page="gallery">Gallery</a></li>
+                <li><a href="reservation.html" class="navbar__link navbar__link--cta" data-page="reservation">Reserve a Table</a></li>
+            </ul>
+
+            <button class="navbar__hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ MENU HERO ═══════════════ -->
+    <header class="page-hero" id="menu-hero">
+        <div class="page-hero__noise"></div>
+        <div class="page-hero__content">
+            <p class="section-label">Our Culinary Identity</p>
+            <h1 class="page-hero__title">The Menu</h1>
+            <p class="page-hero__desc">Two kitchens, one vision. Toggle between our Mediterranean and Japanese souls.</p>
+        </div>
+    </header>
+
+    <!-- ═══════════════ SOUL TOGGLE ═══════════════ -->
+    <section class="menu-section" id="menu-section">
+        <div class="menu-section__container">
+            <div class="soul-toggle" id="soul-toggle">
+                <button class="soul-toggle__btn soul-toggle__btn--active" data-soul="mediterranean" id="toggle-mediterranean">
+                    <span class="soul-toggle__icon">☀</span>
+                    Mediterranean
+                </button>
+                <button class="soul-toggle__btn" data-soul="japanese" id="toggle-japanese">
+                    <span class="soul-toggle__icon">月</span>
+                    Japanese
+                </button>
+                <div class="soul-toggle__slider" id="soul-toggle-slider"></div>
+            </div>
+
+            <!-- MEDITERRANEAN MENU -->
+            <div class="menu-grid" id="menu-mediterranean" data-soul="mediterranean">
+                <div class="menu-category" id="med-starters">
+                    <h2 class="menu-category__title">Starters</h2>
+                    <div class="menu-category__items">
+                        <article class="menu-item" id="med-item-1">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Burrata Caprese</h3>
+                                    <span class="menu-item__price">AED 65</span>
+                                </div>
+                                <p class="menu-item__desc">Creamy burrata, heirloom tomatoes, aged balsamic, basil oil, Maldon sea salt</p>
+                                <div class="menu-item__tags">
+                                    <span class="chip">Vegetarian</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" id="med-item-2">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Grilled Octopus</h3>
+                                    <span class="menu-item__price">AED 85</span>
+                                </div>
+                                <p class="menu-item__desc">Charred Spanish octopus, chimichurri, roasted fingerling potatoes, smoked paprika</p>
+                            </div>
+                        </article>
+                        <article class="menu-item" id="med-item-3">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Mezze Platter</h3>
+                                    <span class="menu-item__price">AED 75</span>
+                                </div>
+                                <p class="menu-item__desc">Hummus, baba ganoush, labneh, marinated olives, warm pita bread</p>
+                                <div class="menu-item__tags">
+                                    <span class="chip">Vegetarian</span>
+                                    <span class="chip">Sharing</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="menu-category" id="med-mains">
+                    <h2 class="menu-category__title">Mains</h2>
+                    <div class="menu-category__items">
+                        <article class="menu-item" id="med-item-4">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Saffron Risotto</h3>
+                                    <span class="menu-item__price">AED 95</span>
+                                </div>
+                                <p class="menu-item__desc">Arborio rice, saffron threads, aged parmesan, truffle oil, micro herbs</p>
+                                <div class="menu-item__tags">
+                                    <span class="chip">Vegetarian</span>
+                                    <span class="chip">Signature</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" id="med-item-5">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Lamb Shank Tagine</h3>
+                                    <span class="menu-item__price">AED 135</span>
+                                </div>
+                                <p class="menu-item__desc">Slow-braised lamb, preserved lemon, dried apricots, couscous, harissa</p>
+                            </div>
+                        </article>
+                        <article class="menu-item" id="med-item-6">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Branzino al Forno</h3>
+                                    <span class="menu-item__price">AED 125</span>
+                                </div>
+                                <p class="menu-item__desc">Whole roasted sea bass, Amalfi lemon, capers, cherry tomatoes, herb crust</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="menu-category" id="med-desserts">
+                    <h2 class="menu-category__title">Desserts</h2>
+                    <div class="menu-category__items">
+                        <article class="menu-item" id="med-item-7">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Tiramisu Classico</h3>
+                                    <span class="menu-item__price">AED 55</span>
+                                </div>
+                                <p class="menu-item__desc">Mascarpone, espresso-soaked savoiardi, Valrhona cocoa, amaretto</p>
+                            </div>
+                        </article>
+                        <article class="menu-item" id="med-item-8">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Baklava Tower</h3>
+                                    <span class="menu-item__price">AED 60</span>
+                                </div>
+                                <p class="menu-item__desc">Layered phyllo, pistachio, walnut, rose water syrup, clotted cream</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JAPANESE MENU -->
+            <div class="menu-grid menu-grid--hidden" id="menu-japanese" data-soul="japanese">
+                <div class="menu-category" id="jpn-starters">
+                    <h2 class="menu-category__title">Starters</h2>
+                    <div class="menu-category__items">
+                        <article class="menu-item" id="jpn-item-1">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Edamame Truffle</h3>
+                                    <span class="menu-item__price">AED 45</span>
+                                </div>
+                                <p class="menu-item__desc">Steamed edamame, black truffle salt, yuzu zest</p>
+                                <div class="menu-item__tags">
+                                    <span class="chip">Vegan</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" id="jpn-item-2">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Tuna Tataki</h3>
+                                    <span class="menu-item__price">AED 85</span>
+                                </div>
+                                <p class="menu-item__desc">Seared bluefin tuna, ponzu, ginger, toasted sesame, micro shiso</p>
+                                <div class="menu-item__tags">
+                                    <span class="chip">Raw</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" id="jpn-item-3">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Gyoza Platter</h3>
+                                    <span class="menu-item__price">AED 60</span>
+                                </div>
+                                <p class="menu-item__desc">Pan-fried pork and prawn dumplings, chili oil, rice vinegar dipping sauce</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="menu-category" id="jpn-mains">
+                    <h2 class="menu-category__title">Mains</h2>
+                    <div class="menu-category__items">
+                        <article class="menu-item" id="jpn-item-4">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Omakase Nigiri</h3>
+                                    <span class="menu-item__price">AED 145</span>
+                                </div>
+                                <p class="menu-item__desc">Chef's selection of 8 seasonal nigiri, vinegared rice, fresh wasabi</p>
+                                <div class="menu-item__tags">
+                                    <span class="chip">Raw</span>
+                                    <span class="chip">Signature</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" id="jpn-item-5">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Wagyu Tataki</h3>
+                                    <span class="menu-item__price">AED 185</span>
+                                </div>
+                                <p class="menu-item__desc">A5 wagyu, ponzu reduction, micro greens, toasted sesame, shiso</p>
+                                <div class="menu-item__tags">
+                                    <span class="chip">Signature</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" id="jpn-item-6">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Black Cod Miso</h3>
+                                    <span class="menu-item__price">AED 155</span>
+                                </div>
+                                <p class="menu-item__desc">48-hour marinated black cod, white miso, pickled ginger, mirin glaze</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="menu-category" id="jpn-desserts">
+                    <h2 class="menu-category__title">Desserts</h2>
+                    <div class="menu-category__items">
+                        <article class="menu-item" id="jpn-item-7">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Matcha Fondant</h3>
+                                    <span class="menu-item__price">AED 55</span>
+                                </div>
+                                <p class="menu-item__desc">Ceremonial matcha, white chocolate center, black sesame ice cream</p>
+                            </div>
+                        </article>
+                        <article class="menu-item" id="jpn-item-8">
+                            <div class="menu-item__info">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">Yuzu Panna Cotta</h3>
+                                    <span class="menu-item__price">AED 50</span>
+                                </div>
+                                <p class="menu-item__desc">Citrus-infused panna cotta, yuzu gel, candied kumquat, kinako crumble</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="footer" id="main-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <span class="footer__logo-icon">◆</span>
+                <span class="footer__logo-text">F.R.N.D.S</span>
+                <span class="footer__logo-sub">GRAND CAFÉ</span>
+                <p class="footer__tagline">Dubai's Dual-Soul Dining Experience</p>
+            </div>
+            <div class="footer__links">
+                <div class="footer__col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="reservation.html">Reservations</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Visit</h4>
+                    <p>Downtown Dubai, UAE</p>
+                    <p>Open Daily: 10am – 12am</p>
+                    <p>+971 4 XXX XXXX</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Connect</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">TripAdvisor</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 F.R.N.D.S Grand Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

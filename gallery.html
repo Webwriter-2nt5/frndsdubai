@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Step inside F.R.N.D.S Grand Café — explore our Art Deco interiors, signature dishes, and unforgettable ambiance in Dubai.">
+    <title>Gallery — F.R.N.D.S Grand Café</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/gallery-page.css">
+</head>
+<body>
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav class="navbar" id="main-navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__logo" id="nav-logo">
+                <span class="navbar__logo-icon">◆</span>
+                <span class="navbar__logo-text">F.R.N.D.S</span>
+                <span class="navbar__logo-sub">GRAND CAFÉ</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="index.html" class="navbar__link" data-page="home">Home</a></li>
+                <li><a href="menu.html" class="navbar__link" data-page="menu">Menu</a></li>
+                <li><a href="gallery.html" class="navbar__link navbar__link--active" data-page="gallery">Gallery</a></li>
+                <li><a href="reservation.html" class="navbar__link navbar__link--cta" data-page="reservation">Reserve a Table</a></li>
+            </ul>
+
+            <button class="navbar__hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ GALLERY HERO ═══════════════ -->
+    <header class="page-hero" id="gallery-hero">
+        <div class="page-hero__noise"></div>
+        <div class="page-hero__content">
+            <p class="section-label">Visual Journey</p>
+            <h1 class="page-hero__title">The Gallery</h1>
+            <p class="page-hero__desc">A curated collection of moments that define the F.R.N.D.S experience.</p>
+        </div>
+    </header>
+
+    <!-- ═══════════════ GALLERY FILTERS ═══════════════ -->
+    <section class="gallery-section" id="gallery-section">
+        <div class="gallery-section__container">
+            <div class="gallery-filters" id="gallery-filters">
+                <button class="gallery-filters__btn gallery-filters__btn--active" data-filter="all" id="filter-all">All</button>
+                <button class="gallery-filters__btn" data-filter="interior" id="filter-interior">Interiors</button>
+                <button class="gallery-filters__btn" data-filter="food" id="filter-food">Cuisine</button>
+                <button class="gallery-filters__btn" data-filter="ambiance" id="filter-ambiance">Ambiance</button>
+            </div>
+
+            <div class="gallery-masonry" id="gallery-masonry">
+                <div class="gallery-item gallery-item--tall" data-category="interior" id="gallery-item-1">
+                    <img src="assets/gallery/interior-1.jpg" alt="Grand entrance with Art Deco chandelier" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__cat">Interior</span>
+                        <h3 class="gallery-item__title">The Grand Entrance</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="food" id="gallery-item-2">
+                    <img src="assets/gallery/food-1.jpg" alt="Saffron Risotto plated elegantly" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__cat">Cuisine</span>
+                        <h3 class="gallery-item__title">Saffron Risotto</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ambiance" id="gallery-item-3">
+                    <img src="assets/gallery/ambiance-1.jpg" alt="Candlelit evening atmosphere" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__cat">Ambiance</span>
+                        <h3 class="gallery-item__title">Evening Glow</h3>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--wide" data-category="interior" id="gallery-item-4">
+                    <img src="assets/gallery/interior-2.jpg" alt="Bar area with emerald velvet seating" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__cat">Interior</span>
+                        <h3 class="gallery-item__title">The Velvet Lounge</h3>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--tall" data-category="food" id="gallery-item-5">
+                    <img src="assets/gallery/food-2.jpg" alt="Omakase Nigiri selection" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__cat">Cuisine</span>
+                        <h3 class="gallery-item__title">Omakase Selection</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ambiance" id="gallery-item-6">
+                    <img src="assets/gallery/ambiance-2.jpg" alt="Sunset terrace view" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__cat">Ambiance</span>
+                        <h3 class="gallery-item__title">Terrace Sunset</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="food" id="gallery-item-7">
+                    <img src="assets/gallery/food-3.jpg" alt="Wagyu Tataki presentation" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__cat">Cuisine</span>
+                        <h3 class="gallery-item__title">Wagyu Tataki</h3>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--wide" data-category="interior" id="gallery-item-8">
+                    <img src="assets/gallery/interior-3.jpg" alt="Private dining room with gold accents" loading="lazy">
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__cat">Interior</span>
+                        <h3 class="gallery-item__title">The Private Suite</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ LIGHTBOX ═══════════════ -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightbox-close" aria-label="Close lightbox">✕</button>
+        <img class="lightbox__img" id="lightbox-img" src="" alt="">
+        <div class="lightbox__caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="footer" id="main-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <span class="footer__logo-icon">◆</span>
+                <span class="footer__logo-text">F.R.N.D.S</span>
+                <span class="footer__logo-sub">GRAND CAFÉ</span>
+                <p class="footer__tagline">Dubai's Dual-Soul Dining Experience</p>
+            </div>
+            <div class="footer__links">
+                <div class="footer__col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="reservation.html">Reservations</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Visit</h4>
+                    <p>Downtown Dubai, UAE</p>
+                    <p>Open Daily: 10am – 12am</p>
+                    <p>+971 4 XXX XXXX</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Connect</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">TripAdvisor</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 F.R.N.D.S Grand Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

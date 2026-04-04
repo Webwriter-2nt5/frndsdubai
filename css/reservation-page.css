@@ -1,0 +1,355 @@
+/* ═══════════════════════════════════════════════
+   RESERVATION PAGE — Form, Guest Selector, Modal
+   ═══════════════════════════════════════════════ */
+
+.reservation-section {
+    padding: var(--sp-12) var(--sp-6) var(--sp-20);
+    background: var(--surface);
+}
+
+.reservation-section__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--sp-12);
+    align-items: start;
+}
+
+/* ── FORM WRAPPER ── */
+.reservation-form-wrapper {
+    background: var(--surface-container-low);
+    padding: var(--sp-10);
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-6);
+}
+
+.reservation-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-6);
+}
+
+.reservation-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+}
+
+.reservation-form__label {
+    font-family: var(--ff-body);
+    font-size: var(--fs-label);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--on-surface-variant);
+}
+
+.reservation-form__input {
+    width: 100%;
+    padding: var(--sp-4);
+    background: var(--surface-container-lowest);
+    border: none;
+    border-bottom: 1px solid transparent;
+    color: var(--on-surface);
+    font-size: var(--fs-body-md);
+    outline: none;
+    transition: border-color var(--duration-fast) var(--ease-in-out),
+                background var(--duration-fast) var(--ease-in-out);
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.reservation-form__input::placeholder {
+    color: var(--on-surface-variant);
+    opacity: 0.5;
+}
+
+.reservation-form__input:focus {
+    border-bottom-color: var(--secondary);
+}
+
+.reservation-form__input:invalid:not(:placeholder-shown) {
+    border-bottom-color: var(--tertiary);
+}
+
+.reservation-form__textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Select styling */
+select.reservation-form__input {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%23B0AA9E'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+/* Date input */
+input[type="date"].reservation-form__input {
+    cursor: pointer;
+}
+
+input[type="date"].reservation-form__input::-webkit-calendar-picker-indicator {
+    filter: invert(0.7);
+    cursor: pointer;
+}
+
+/* ── GUEST SELECTOR ── */
+.guest-selector {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
+    background: var(--surface-container-lowest);
+    padding: var(--sp-2) var(--sp-4);
+    width: fit-content;
+}
+
+.guest-selector__btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--on-surface-variant);
+    background: var(--surface-container);
+    transition: background var(--duration-fast) var(--ease-in-out),
+                color var(--duration-fast) var(--ease-in-out);
+}
+
+.guest-selector__btn:hover {
+    background: var(--secondary);
+    color: var(--on-secondary);
+}
+
+.guest-selector__count {
+    font-family: var(--ff-display);
+    font-size: var(--fs-headline-md);
+    min-width: 40px;
+    text-align: center;
+}
+
+/* ── DINING PREFERENCE ── */
+.dining-preference {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+}
+
+.dining-preference__btn {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body-sm);
+    font-weight: 500;
+    padding: var(--sp-3) var(--sp-5);
+    border: 1px solid var(--outline-variant);
+    color: var(--on-surface-variant);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all var(--duration-fast) var(--ease-in-out);
+}
+
+.dining-preference__btn:hover {
+    border-color: var(--on-surface-variant);
+    color: var(--on-surface);
+}
+
+.dining-preference__btn--active {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--on-secondary);
+}
+
+/* ── SUBMIT BUTTON LOADER ── */
+.btn__loader {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid transparent;
+    border-top-color: var(--on-secondary);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+.btn--loading .btn__text {
+    opacity: 0.5;
+}
+
+.btn--loading .btn__loader {
+    display: block;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── RESERVATION INFO SIDEBAR ── */
+.reservation-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-6);
+}
+
+.reservation-info__card {
+    background: var(--surface-container-low);
+    padding: var(--sp-8);
+}
+
+.reservation-info__title {
+    font-family: var(--ff-body);
+    font-size: var(--fs-label);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--secondary);
+    margin-bottom: var(--sp-5);
+}
+
+.reservation-info__hours {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+}
+
+.reservation-info__row {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-body-sm);
+    color: var(--on-surface-variant);
+}
+
+.reservation-info__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+}
+
+.reservation-info__list li {
+    font-size: var(--fs-body-sm);
+    color: var(--on-surface-variant);
+    padding-left: var(--sp-4);
+    position: relative;
+}
+
+.reservation-info__list li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-size: 0.5rem;
+    top: 0.35em;
+}
+
+.reservation-info__card p {
+    font-size: var(--fs-body-sm);
+    color: var(--on-surface-variant);
+    margin-bottom: var(--sp-2);
+}
+
+/* ── SUCCESS MODAL ── */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--duration-normal) var(--ease-in-out),
+                visibility var(--duration-normal);
+}
+
+.modal--open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(18, 19, 18, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.modal__content {
+    position: relative;
+    background: var(--surface-container-low);
+    padding: var(--sp-12) var(--sp-10);
+    max-width: 460px;
+    width: 90%;
+    text-align: center;
+    transform: scale(0.92) translateY(20px);
+    transition: transform var(--duration-slow) var(--ease-out-expo);
+}
+
+.modal--open .modal__content {
+    transform: scale(1) translateY(0);
+}
+
+.modal__icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary);
+    color: var(--on-secondary);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 auto var(--sp-6);
+}
+
+.modal__title {
+    font-size: var(--fs-headline-md);
+    margin-bottom: var(--sp-4);
+}
+
+.modal__desc {
+    font-size: var(--fs-body-md);
+    color: var(--on-surface-variant);
+    line-height: 1.65;
+    margin-bottom: var(--sp-4);
+}
+
+.modal__details {
+    font-size: var(--fs-body-sm);
+    color: var(--on-surface-variant);
+    margin-bottom: var(--sp-8);
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+    .reservation-section__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .reservation-form-wrapper {
+        padding: var(--sp-6);
+    }
+
+    .reservation-form__row {
+        grid-template-columns: 1fr;
+    }
+
+    .dining-preference {
+        flex-direction: column;
+    }
+
+    .dining-preference__btn {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserve your table at F.R.N.D.S Grand Café, Dubai. An unforgettable dual-soul dining experience awaits.">
+    <title>Reservations — F.R.N.D.S Grand Café</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/reservation-page.css">
+</head>
+<body>
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav class="navbar" id="main-navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__logo" id="nav-logo">
+                <span class="navbar__logo-icon">◆</span>
+                <span class="navbar__logo-text">F.R.N.D.S</span>
+                <span class="navbar__logo-sub">GRAND CAFÉ</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="index.html" class="navbar__link" data-page="home">Home</a></li>
+                <li><a href="menu.html" class="navbar__link" data-page="menu">Menu</a></li>
+                <li><a href="gallery.html" class="navbar__link" data-page="gallery">Gallery</a></li>
+                <li><a href="reservation.html" class="navbar__link navbar__link--cta navbar__link--active" data-page="reservation">Reserve a Table</a></li>
+            </ul>
+
+            <button class="navbar__hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ RESERVATION HERO ═══════════════ -->
+    <header class="page-hero" id="reservation-hero">
+        <div class="page-hero__noise"></div>
+        <div class="page-hero__content">
+            <p class="section-label">Your Evening Begins Here</p>
+            <h1 class="page-hero__title">Reserve a Table</h1>
+            <p class="page-hero__desc">Secure your place at the intersection of Mediterranean warmth and Japanese precision.</p>
+        </div>
+    </header>
+
+    <!-- ═══════════════ RESERVATION FORM ═══════════════ -->
+    <section class="reservation-section" id="reservation-section">
+        <div class="reservation-section__container">
+            <div class="reservation-form-wrapper" id="reservation-form-wrapper">
+                <form class="reservation-form" id="reservation-form" novalidate>
+                    <div class="reservation-form__group">
+                        <label class="reservation-form__label" for="res-name">Full Name</label>
+                        <input class="reservation-form__input" type="text" id="res-name" name="name" placeholder="Your name" required autocomplete="name">
+                    </div>
+
+                    <div class="reservation-form__row">
+                        <div class="reservation-form__group">
+                            <label class="reservation-form__label" for="res-email">Email</label>
+                            <input class="reservation-form__input" type="email" id="res-email" name="email" placeholder="your@email.com" required autocomplete="email">
+                        </div>
+                        <div class="reservation-form__group">
+                            <label class="reservation-form__label" for="res-phone">Phone</label>
+                            <input class="reservation-form__input" type="tel" id="res-phone" name="phone" placeholder="+971 XX XXX XXXX" required autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div class="reservation-form__row">
+                        <div class="reservation-form__group">
+                            <label class="reservation-form__label" for="res-date">Date</label>
+                            <input class="reservation-form__input" type="date" id="res-date" name="date" required>
+                        </div>
+                        <div class="reservation-form__group">
+                            <label class="reservation-form__label" for="res-time">Time</label>
+                            <select class="reservation-form__input" id="res-time" name="time" required>
+                                <option value="" disabled selected>Select time</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                                <option value="22:00">10:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="reservation-form__group">
+                        <label class="reservation-form__label" for="res-guests">Number of Guests</label>
+                        <div class="guest-selector" id="guest-selector">
+                            <button type="button" class="guest-selector__btn" id="guest-minus" aria-label="Decrease guests">−</button>
+                            <span class="guest-selector__count" id="guest-count">2</span>
+                            <input type="hidden" id="res-guests" name="guests" value="2">
+                            <button type="button" class="guest-selector__btn" id="guest-plus" aria-label="Increase guests">+</button>
+                        </div>
+                    </div>
+
+                    <div class="reservation-form__group">
+                        <label class="reservation-form__label">Dining Preference</label>
+                        <div class="dining-preference" id="dining-preference">
+                            <button type="button" class="dining-preference__btn dining-preference__btn--active" data-pref="any" id="pref-any">No Preference</button>
+                            <button type="button" class="dining-preference__btn" data-pref="mediterranean" id="pref-mediterranean">Mediterranean</button>
+                            <button type="button" class="dining-preference__btn" data-pref="japanese" id="pref-japanese">Japanese</button>
+                            <button type="button" class="dining-preference__btn" data-pref="private" id="pref-private">Private Suite</button>
+                        </div>
+                    </div>
+
+                    <div class="reservation-form__group">
+                        <label class="reservation-form__label" for="res-notes">Special Requests</label>
+                        <textarea class="reservation-form__input reservation-form__textarea" id="res-notes" name="notes" placeholder="Allergies, celebrations, seating preferences..." rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--lg btn--full" id="reservation-submit">
+                        <span class="btn__text">Confirm Reservation</span>
+                        <span class="btn__loader" aria-hidden="true"></span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="reservation-info" id="reservation-info">
+                <div class="reservation-info__card">
+                    <h3 class="reservation-info__title">Opening Hours</h3>
+                    <div class="reservation-info__hours">
+                        <div class="reservation-info__row">
+                            <span>Monday – Thursday</span>
+                            <span>10:00 AM – 11:00 PM</span>
+                        </div>
+                        <div class="reservation-info__row">
+                            <span>Friday – Saturday</span>
+                            <span>10:00 AM – 12:00 AM</span>
+                        </div>
+                        <div class="reservation-info__row">
+                            <span>Sunday</span>
+                            <span>10:00 AM – 10:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reservation-info__card">
+                    <h3 class="reservation-info__title">Important Notes</h3>
+                    <ul class="reservation-info__list">
+                        <li>Reservations recommended for dinner service</li>
+                        <li>Walk-ins welcome subject to availability</li>
+                        <li>Private suite requires minimum 6 guests</li>
+                        <li>Please notify us of dietary requirements in advance</li>
+                    </ul>
+                </div>
+
+                <div class="reservation-info__card">
+                    <h3 class="reservation-info__title">Contact</h3>
+                    <p>+971 4 XXX XXXX</p>
+                    <p>reservations@frnds.ae</p>
+                    <p>Downtown Dubai, UAE</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ SUCCESS MODAL ═══════════════ -->
+    <div class="modal" id="success-modal" aria-hidden="true">
+        <div class="modal__backdrop" id="modal-backdrop"></div>
+        <div class="modal__content" id="modal-content">
+            <div class="modal__icon">✓</div>
+            <h2 class="modal__title">Reservation Confirmed</h2>
+            <p class="modal__desc">Thank you! We look forward to welcoming you at F.R.N.D.S Grand Café.</p>
+            <p class="modal__details" id="modal-details"></p>
+            <button class="btn btn--primary" id="modal-close">Close</button>
+        </div>
+    </div>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="footer" id="main-footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <span class="footer__logo-icon">◆</span>
+                <span class="footer__logo-text">F.R.N.D.S</span>
+                <span class="footer__logo-sub">GRAND CAFÉ</span>
+                <p class="footer__tagline">Dubai's Dual-Soul Dining Experience</p>
+            </div>
+            <div class="footer__links">
+                <div class="footer__col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="reservation.html">Reservations</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Visit</h4>
+                    <p>Downtown Dubai, UAE</p>
+                    <p>Open Daily: 10am – 12am</p>
+                    <p>+971 4 XXX XXXX</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Connect</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">TripAdvisor</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 F.R.N.D.S Grand Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

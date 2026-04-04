@@ -1,0 +1,210 @@
+/* ═══════════════════════════════════════════════
+   MENU PAGE — Soul Toggle, Menu Items
+   ═══════════════════════════════════════════════ */
+
+.menu-section {
+    padding: var(--sp-12) var(--sp-6) var(--sp-20);
+    background: var(--surface);
+}
+
+.menu-section__container {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* ── SOUL TOGGLE ── */
+.soul-toggle {
+    display: flex;
+    position: relative;
+    background: var(--surface-container-low);
+    margin-bottom: var(--sp-12);
+    overflow: hidden;
+}
+
+.soul-toggle__btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-3);
+    padding: var(--sp-5) var(--sp-6);
+    font-family: var(--ff-body);
+    font-size: var(--fs-body-md);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--on-surface-variant);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color var(--duration-slow) var(--ease-out-expo);
+}
+
+.soul-toggle__btn--active {
+    color: var(--on-surface);
+}
+
+.soul-toggle__icon {
+    font-size: 1.25rem;
+}
+
+.soul-toggle__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    transition: left var(--duration-slow) var(--ease-out-expo),
+                background var(--duration-slow) var(--ease-out-expo);
+}
+
+.soul-toggle__slider[data-soul="mediterranean"],
+.soul-toggle__slider:not([data-soul]) {
+    left: 0;
+    background: var(--tertiary-container);
+}
+
+.soul-toggle__slider[data-soul="japanese"] {
+    left: 50%;
+    background: var(--primary-container);
+}
+
+/* ── MENU GRID ── */
+.menu-grid {
+    transition: opacity var(--duration-slow) var(--ease-out-expo),
+                transform var(--duration-slow) var(--ease-out-expo);
+}
+
+.menu-grid--hidden {
+    display: none;
+}
+
+.menu-grid--fade-out {
+    opacity: 0;
+    transform: translateY(12px);
+}
+
+.menu-grid--fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: menuFadeIn var(--duration-slow) var(--ease-out-expo) forwards;
+}
+
+@keyframes menuFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── MENU CATEGORY ── */
+.menu-category {
+    margin-bottom: var(--sp-12);
+}
+
+.menu-category__title {
+    font-family: var(--ff-display);
+    font-size: var(--fs-headline-md);
+    letter-spacing: 0.06em;
+    margin-bottom: var(--sp-6);
+    padding-bottom: var(--sp-3);
+    position: relative;
+}
+
+.menu-category__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--secondary);
+}
+
+.menu-category__items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-6);
+}
+
+/* ── MENU ITEM ── */
+.menu-item {
+    padding: var(--sp-6);
+    background: var(--surface-container-low);
+    transition: background var(--duration-fast) var(--ease-in-out),
+                transform var(--duration-fast) var(--ease-out-expo);
+}
+
+.menu-item:hover {
+    background: var(--surface-container);
+    transform: translateX(4px);
+}
+
+.menu-item__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    margin-bottom: var(--sp-2);
+}
+
+.menu-item__name {
+    font-family: var(--ff-display);
+    font-size: var(--fs-title-lg);
+    font-weight: 500;
+}
+
+.menu-item__price {
+    font-family: var(--ff-display);
+    font-size: var(--fs-title-md);
+    color: var(--secondary);
+    flex-shrink: 0;
+}
+
+.menu-item__desc {
+    font-size: var(--fs-body-md);
+    color: var(--on-surface-variant);
+    line-height: 1.65;
+    margin-bottom: var(--sp-3);
+}
+
+.menu-item__tags {
+    display: flex;
+    gap: var(--sp-2);
+    flex-wrap: wrap;
+}
+
+/* ── SOUL-SPECIFIC ACCENTS ── */
+[data-soul="mediterranean"] .menu-category__title::after {
+    background: var(--tertiary);
+}
+
+[data-soul="japanese"] .menu-category__title::after {
+    background: var(--primary);
+}
+
+[data-soul="japanese"] .menu-item:hover {
+    border-left: 2px solid var(--primary);
+}
+
+[data-soul="mediterranean"] .menu-item:hover {
+    border-left: 2px solid var(--tertiary);
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 600px) {
+    .soul-toggle__btn {
+        font-size: var(--fs-body-sm);
+        padding: var(--sp-4) var(--sp-3);
+        letter-spacing: 0.08em;
+    }
+
+    .menu-item__header {
+        flex-direction: column;
+        gap: var(--sp-1);
+    }
+}
