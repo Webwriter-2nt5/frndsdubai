@@ -200,15 +200,15 @@
         height: 100vh;
         height: 100dvh;
         flex-direction: column;
-        align-items: stretch;
+        align-items: center; /* Center items instead of stretch for better aesthetics */
         justify-content: center;
-        gap: var(--sp-1);
-        padding: var(--sp-10) var(--sp-6);
+        gap: 2rem; /* Significantly increased gap to prevent crowding */
+        padding: 5rem 2rem;
         background: rgba(18, 19, 18, 0.97);
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
         transform: translateX(100%);
-        transition: transform var(--duration-slow) var(--ease-out-expo);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .navbar__links--open {
@@ -217,20 +217,30 @@
 
     .navbar__link {
         font-size: var(--fs-title-md);
-        padding: var(--sp-4) var(--sp-4);
+        padding: var(--sp-2) var(--sp-4);
         letter-spacing: 0.08em;
+        text-align: center;
+        display: inline-block;
     }
 
     .navbar__link::after {
-        left: var(--sp-4);
+        left: 50%;
         right: auto;
-        width: 24px;
+        transform: translateX(-50%) scaleX(0); /* Center the underline */
+        width: 40px;
+    }
+
+    .navbar__link:hover::after,
+    .navbar__link--active::after {
+        transform: translateX(-50%) scaleX(1);
     }
 
     .navbar__link--cta {
         margin-left: 0;
-        margin-top: var(--sp-4);
+        margin-top: 1rem; /* Added an explicit, slightly larger margin-top so it feels distinct */
         text-align: center;
-        padding: var(--sp-4) var(--sp-5);
+        padding: 1rem 2rem;
+        width: 100%;
+        max-width: 280px; /* Limit width nicely */
     }
 }
